@@ -2,26 +2,34 @@ class Blokje
 {
   int x;
   int y;
+  int h;
+  int w;
   
   int xRichting = 1;
   int yRichting = 1;
   
-  Blokje (int y, int x){
+  Blokje (int w, int h, int y, int x){
+   this.w = w;
+   this.h = h;
    this.x = x;
    this.y = y;
    
   }
   void draw() { 
-   rect(x, y, 10, 10); 
+   rect(x, y, w, h); 
   }
   void update() {
      x += xRichting;
      y += yRichting;
   }
+  void grow(){
+    w += 1;
+    h += 1;
+  }
 }
 
-Blokje b1 = new Blokje(50,50);
-Blokje b2 = new Blokje(100,200);
+Blokje b1 = new Blokje(10, 10, 50,50);
+Blokje b2 = new Blokje(10, 10, 100,200);
 
 void setup()
 {
@@ -39,4 +47,9 @@ void draw()
    b1.update();
    b2.update();
   }
+  
+  if(mousePressed == true && mouseButton == RIGHT) {
+   b1.grow();
+   b2.grow();
+ }
 }
