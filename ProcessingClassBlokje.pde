@@ -3,13 +3,20 @@ class Blokje
   int x;
   int y;
   
+  int xRichting = 1;
+  int yRichting = 1;
+  
   Blokje (int y, int x){
    this.x = x;
    this.y = y;
    
   }
-  void show() { 
+  void draw() { 
    rect(x, y, 10, 10); 
+  }
+  void update() {
+     x += xRichting;
+     y += yRichting;
   }
 }
 
@@ -25,6 +32,11 @@ void setup()
 void draw()
 {
   background(200);
-  b1.show();
-  b2.show();
+  b1.draw();
+  b2.draw();
+  
+  if(mousePressed == true && mouseButton == LEFT) {
+   b1.update();
+   b2.update();
+  }
 }
