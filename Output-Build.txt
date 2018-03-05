@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: class blokje1, Configuration: Debug Any CPU ------
+1>  class blokje1 -> D:\5ITN\Marcin\Tools\Processing\MyProcssing\ProcessingClassBlokje\class blokje1\class blokje1\bin\Debug\class blokje1.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
